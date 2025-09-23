@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "vite.config.js", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . || echo 'changes'",
+  "outputDirectory": "dist"
+}

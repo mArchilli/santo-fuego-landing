@@ -8,8 +8,5 @@ module.exports = {
         gold: '#d4af37'
       }
     }
-  },
-  plugins: [
-    require('@tailwindcss/line-clamp')
-  ]
+  }
 }
