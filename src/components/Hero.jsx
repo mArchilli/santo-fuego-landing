@@ -19,7 +19,7 @@ export default function Hero(){
       <img
         src="/assets/argentine-grill-with-fire-and-meat-cooking--dark-a.jpg"
         alt="Carne asándose sobre parrilla con llamas vivas"
-        className="absolute inset-0 w-full h-full object-cover object-center brightness-95"
+        className="absolute inset-0 w-full h-full object-cover object-center brightness-95 grayscale"
         loading="eager"
         decoding="async"
       />
@@ -28,8 +28,8 @@ export default function Hero(){
       <div className="absolute inset-0 bg-black/45 mix-blend-multiply" aria-hidden="true" />
       {/* Contenido */}
       <div className="relative z-10 px-6 w-full max-w-5xl mx-auto text-center">
-        <div className="flex flex-col items-center">
-          <div className="mb-6 text-6xl md:text-7xl leading-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] select-none" aria-hidden="true">🔥</div>
+  <div className="flex flex-col items-center">
+          {/* <div className="mb-6 text-6xl md:text-7xl leading-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] select-none" aria-hidden="true">🔥</div> */}
 
           {/* <h1
             id="hero-heading"
@@ -39,39 +39,42 @@ export default function Hero(){
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-gold to-amber-500">Fuego</span>
           </h1> */}
 
-          <h1 className="dramatic-text text-6xl md:text-8xl lg:text-9xl mb-8">
-          SANTO
-          <br />
-          FUEGO
-        </h1>
-          <p className="mt-7 max-w-3xl mx-auto text-base md:text-xl font-light text-white/80 leading-relaxed">
-            La auténtica experiencia del asado argentino. Carnes premium, tradición familiar y el sabor
-            inconfundible del fuego sagrado.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <a
-              href="#menu"
-              className="inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold bg-amber-500/90 hover:bg-amber-400 text-black shadow-lg shadow-amber-500/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 transition"
-            >
-              Ver Nuestro Menú
-            </a>
-            <a
-              href="#reservations"
-              className="inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold border border-amber-500/70 text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 transition"
-            >
-              Reservar Mesa
-            </a>
+          <h1 className="dramatic-text text-8xl md:text-9xl mb-8 uppercase">
+            SANTO
+            <br />
+            FUEGO
+          </h1>
+
+          {/* Panel translúcido con texto y CTAs para mayor contraste sobre la imagen */}
+          <div className="w-full max-w-3xl mx-auto ">
+            <p className="text-xl md:text-2xl font-light text-white/80 leading-relaxed text-center">
+              La pasión argentina por la parrilla se encuentra con la excelencia culinaria. Cada corte, cada llama, cada momento es una celebración del fuego sagrado.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="#reservations"
+                className="w-full sm:w-auto relative inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:-z-10 after:bg-accent hover:after:bg-red-600 after:blur-xl after:opacity-40 hover:after:opacity-60"
+              >
+                Reservar Mesa
+              </a>
+              <a
+                href="#menu"
+                className="w-full sm:w-auto inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide border border-white/70 text-white hover:bg-white/10 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
+              >
+                Ver Menú
+              </a>
+            </div>
           </div>
         </div>
       </div>
       {/* Indicador de scroll */}
       <a
         href="#menu"
-        className="group absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-wider font-medium text-white/60 hover:text-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 rounded"
+        className="group absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-wider font-medium text-white/60 hover:text-red-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60 rounded"
         aria-label="Ir al menú"
       >
-        <span className="relative flex h-9 w-5 items-start justify-center rounded-full border border-white/40 group-hover:border-gold/70 transition">
-          <span className="mt-1 h-2 w-1 rounded-full bg-white/70 group-hover:bg-gold animate-pulse" />
+        <span className="relative flex h-9 w-5 items-start justify-center rounded-full border border-white/40 group-hover:border-red-400/70 transition">
+          <span className="mt-1 h-2 w-1 rounded-full bg-white/70 group-hover:bg-red-400 animate-pulse" />
         </span>
         Scroll
       </a>
