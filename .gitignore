@@ -1,0 +1,49 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# Build output
+/dist/
+/.vercel/
+.vercel/*
+
+# Vite
+vite.svg
+.vite/
+
+# Local env files
+.env
+.env.*.local
+
+# Editor & OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# Coverage & test
+coverage/
+.nyc_output/
+
+# Misc caches
+.cache/
+.eslintcache
+stylelint.cache
+parcel-cache/
+.browserslistrc
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Optional: Firebase emulators / local state
+.firebase/
+.firebaserc.local

@@ -30,13 +30,20 @@ export default function Hero(){
       <div className="relative z-10 px-6 w-full max-w-5xl mx-auto text-center">
         <div className="flex flex-col items-center">
           <div className="mb-6 text-6xl md:text-7xl leading-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] select-none" aria-hidden="true">🔥</div>
-          <h1
+
+          {/* <h1
             id="hero-heading"
             className="font-extrabold tracking-tight text-[clamp(2.75rem,6vw,4.5rem)] leading-[1.05] drop-shadow-sm"
           >
             <span className="text-white">Santo</span>{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-gold to-amber-500">Fuego</span>
-          </h1>
+          </h1> */}
+
+          <h1 className="dramatic-text text-6xl md:text-8xl lg:text-9xl mb-8">
+          SANTO
+          <br />
+          FUEGO
+        </h1>
           <p className="mt-7 max-w-3xl mx-auto text-base md:text-xl font-light text-white/80 leading-relaxed">
             La auténtica experiencia del asado argentino. Carnes premium, tradición familiar y el sabor
             inconfundible del fuego sagrado.

@@ -1,3 +1,7 @@
+/* Fuentes: Geist Sans (principal) y Geist Mono (monoespaciada) */
+@import url('@fontsource/geist-sans/latin.css');
+@import url('@fontsource/geist-mono/latin.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +12,22 @@
   --gold: #d4af37;
 }
 
+@layer base {
+  html {
+    font-family: 'Geist Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", "Helvetica Neue", sans-serif;
+  }
+  code, pre, kbd, samp, .font-mono-geist {
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+
+
 body {
   background-color: var(--bg);
+}
+
+.dramatic-text {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
 }
