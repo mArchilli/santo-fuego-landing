@@ -25,7 +25,7 @@ export default function Contact(){
                   <div className="flex-1">
                     <h3 className="font-semibold text-white mb-1">Teléfono</h3>
                     <ul className="text-white/70 text-sm leading-relaxed space-y-1">
-                      <li><a className="hover:text-gold" href="tel:+541143216789">+54 11 4321-6789</a></li>
+                      <li><a className="hover:text-gold" href="tel:+541136039118">+54 11 3603 - 9118</a></li>
                     </ul>
                   </div>
                 </div>
@@ -52,9 +52,9 @@ export default function Contact(){
                   <div className="flex-1">
                     <h3 className="font-semibold text-white mb-1">Horarios</h3>
                     <ul className="text-white/70 text-sm leading-relaxed space-y-1">
-                      <li><span className="text-white">Lunes a Jueves:</span> 19:00 - 00:00</li>
-                      <li><span className="text-white">Viernes y Sábado:</span> 19:00 - 01:00</li>
-                      <li><span className="text-white">Domingo:</span> 19:00 - 23:30</li>
+                      <li><span className="text-white">Martes a Viernes:</span> 12:00 - 16:00</li>
+                      <li><span className="text-white">Sábado:</span> 12:00 - 16:00 || 20:00 - 00:00</li>
+                      <li><span className="text-white">Domingo:</span> 12:00 - 17:00</li>
                     </ul>
                     <p className="mt-2 text-[11px] text-accent/80 italic">*Última orden 30 min antes del cierre</p>
                   </div>

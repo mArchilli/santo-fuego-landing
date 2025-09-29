@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Menu from '../components/Menu'
@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 export default function LandingPage(){
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <About />
       <Menu />
