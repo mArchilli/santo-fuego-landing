@@ -39,11 +39,14 @@ export default function Hero(){
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-gold to-amber-500">Fuego</span>
           </h1> */}
 
-          <h1 className="dramatic-text text-8xl md:text-9xl mb-8 uppercase">
+          <h1 className="dramatic-text text-8xl md:text-9xl mb-4 uppercase">
             SANTO
             <br />
             FUEGO
           </h1>
+          <p className="text-red-500 tracking-[0.2em] text-xs md:text-sm font-medium uppercase mb-8 select-none">
+            Restaurante. Carne. Vinos
+          </p>
 
           {/* Panel translúcido con texto y CTAs para mayor contraste sobre la imagen */}
           <div className="w-full max-w-3xl mx-auto ">
@@ -51,15 +54,17 @@ export default function Hero(){
               La pasión argentina por la parrilla se encuentra con la excelencia culinaria. Cada corte, cada llama, cada momento es una celebración del fuego sagrado.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              {/* Botón primario minimalista */}
               <a
                 href="#reservations"
-                className="w-full sm:w-auto relative inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:-z-10 after:bg-accent hover:after:bg-red-600 after:blur-xl after:opacity-40 hover:after:opacity-60"
+                className="group w-full sm:w-auto inline-flex items-center justify-center rounded-md px-8 py-3 text-sm font-semibold uppercase tracking-wide bg-red-600 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200 hover:bg-red-500 active:bg-red-700"
               >
                 Reservar Mesa
               </a>
+              {/* Botón secundario estilo outline minimal */}
               <a
                 href="#menu"
-                className="w-full sm:w-auto inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide border border-white/70 text-white hover:bg-white/10 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-md px-8 py-3 text-sm font-semibold uppercase tracking-wide border border-red-600/70 text-red-400 hover:text-white hover:bg-red-600/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200"
               >
                 Ver Menú
               </a>
@@ -67,16 +72,24 @@ export default function Hero(){
           </div>
         </div>
       </div>
-      {/* Indicador de scroll */}
+      {/* Indicador de scroll (flecha sola) */}
       <a
         href="#menu"
-        className="group absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-wider font-medium text-white/60 hover:text-red-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60 rounded"
         aria-label="Ir al menú"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 inline-flex h-10 w-10 items-center justify-center text-white/85 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 rounded-full transition"
       >
-        <span className="relative flex h-9 w-5 items-start justify-center rounded-full border border-white/40 group-hover:border-red-400/70 transition">
-          <span className="mt-1 h-2 w-1 rounded-full bg-white/70 group-hover:bg-red-400 animate-pulse" />
-        </span>
-        Scroll
+        <svg
+          className="h-5 w-5 animate-bounce-slow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </a>
     </section>
   )
