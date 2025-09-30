@@ -8,7 +8,7 @@ export default function Contact(){
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <header className="text-center max-w-3xl mx-auto mb-16">
           <h2 id="contact-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight">
-            Visitános en <span className="text-gold">Santo Fuego</span>
+            Visitános en <span className="text-red-400">Santo Fuego</span>
           </h2>
           <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">
             Te esperamos en nuestro acogedor restaurante. Vení a vivir la auténtica experiencia
@@ -25,7 +25,7 @@ export default function Contact(){
                   <div className="flex-1">
                     <h3 className="font-semibold text-white mb-1">Teléfono</h3>
                     <ul className="text-white/70 text-sm leading-relaxed space-y-1">
-                      <li><a className="hover:text-gold" href="tel:+541136039118">+54 11 3603 - 9118</a></li>
+                      <li><a className="hover:text-red-400" href="tel:+541136039118">+54 11 3603 - 9118</a></li>
                     </ul>
                   </div>
                 </div>
@@ -38,8 +38,8 @@ export default function Contact(){
                   <div className="flex-1">
                     <h3 className="font-semibold text-white mb-1">Email</h3>
                     <ul className="text-white/70 text-sm leading-relaxed space-y-1">
-                      <li><a className="hover:text-gold" href="mailto:info@santofuego.com.ar">info@santofuego.com.ar</a></li>
-                      <li><a className="hover:text-gold" href="mailto:reservas@santofuego.com.ar">reservas@santofuego.com.ar</a></li>
+                      <li><a className="hover:text-red-400" href="mailto:info@santofuego.com.ar">info@santofuego.com.ar</a></li>
+                      <li><a className="hover:text-red-400" href="mailto:reservas@santofuego.com.ar">reservas@santofuego.com.ar</a></li>
                     </ul>
                   </div>
                 </div>
@@ -52,8 +52,8 @@ export default function Contact(){
                   <div className="flex-1">
                     <h3 className="font-semibold text-white mb-1">Horarios</h3>
                     <ul className="text-white/70 text-sm leading-relaxed space-y-1">
-                      <li><span className="text-white">Martes a Viernes:</span> 12:00 - 16:00</li>
-                      <li><span className="text-white">Sábado:</span> 12:00 - 16:00 || 20:00 - 00:00</li>
+                      <li><span className="text-white">Martes a Jueves:</span> 12:00 - 16:00</li>
+                      <li><span className="text-white">Viernes y Sábado:</span> 12:00 - 16:00 || 20:00 - 00:00</li>
                       <li><span className="text-white">Domingo:</span> 12:00 - 17:00</li>
                     </ul>
                     <p className="mt-2 text-[11px] text-accent/80 italic">*Última orden 30 min antes del cierre</p>
@@ -76,10 +76,7 @@ export default function Contact(){
               ></iframe>
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
-            <div className="pt-5 text-center">
-              <h3 className="font-semibold text-white text-sm tracking-wide">Mapa Interactivo</h3>
-              <p className="text-[11px] text-white/60 mt-1">Av. Corrientes 1234, Palermo</p>
-            </div>
+            
           </Card>
         </div>
       </div>

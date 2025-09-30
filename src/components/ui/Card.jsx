@@ -7,7 +7,7 @@ export function Card({ as:Tag='div', className='', children, ...rest }) {
     <Tag
       className={clsx(
         'relative rounded-xl md:rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm',
-        'shadow-[0_0_0_1px_rgba(255,255,255,0.04)] hover:shadow-[0_0_0_1px_rgba(255,199,88,0.35)] transition-colors',
+        'shadow-[0_0_0_1px_rgba(255,255,255,0.04)] hover:shadow-[0_0_0_1px_rgba(248,113,113,0.35)] transition-colors',
         'p-5 md:p-6',
         className
       )}
