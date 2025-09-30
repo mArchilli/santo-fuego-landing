@@ -39,13 +39,13 @@ export default function Hero(){
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-gold to-amber-500">Fuego</span>
           </h1> */}
 
-          <h1 className="dramatic-text text-8xl md:text-9xl mb-4 uppercase">
+          <h1 className="dramatic-text text-8xl md:text-9xl mb-2 uppercase">
             SANTO
             <br />
             FUEGO
           </h1>
-          <p className="text-red-500 tracking-[0.2em] text-xs md:text-sm font-medium uppercase mb-8 select-none">
-            Restaurante. Carne. Vinos
+          <p className="text-red-500 tracking-[0.18em] md:tracking-[0.28em] text-[0.7rem] md:text-sm font-semibold uppercase mb-8 select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_0_4px_rgba(0,0,0,0.55)]">
+            Parrilla. Carne. Vinos
           </p>
 
           {/* Panel translúcido con texto y CTAs para mayor contraste sobre la imagen */}
@@ -53,21 +53,25 @@ export default function Hero(){
             <p className="text-xl md:text-2xl font-light text-white/80 leading-relaxed text-center">
               La pasión argentina por la parrilla se encuentra con la excelencia culinaria. Cada corte, cada llama, cada momento es una celebración del fuego sagrado.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              {/* Botón primario minimalista */}
-              <a
-                href="#reservations"
-                className="group w-full sm:w-auto inline-flex items-center justify-center rounded-md px-8 py-3 text-sm font-semibold uppercase tracking-wide bg-red-600 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200 hover:bg-red-500 active:bg-red-700"
-              >
-                Reservar Mesa
-              </a>
-              {/* Botón secundario estilo outline minimal */}
-              <a
-                href="#menu"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-md px-8 py-3 text-sm font-semibold uppercase tracking-wide border border-red-600/70 text-red-400 hover:text-white hover:bg-red-600/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200"
-              >
-                Ver Menú
-              </a>
+            {/* Botonera segmentada */}
+            <div className="mt-10 inline-flex flex-row items-stretch justify-center rounded-xl overflow-hidden relative max-w-full w-full sm:w-auto">
+              {/* Glow sutil detrás */}
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-red-600/25 via-red-500/10 to-transparent blur-xl" />
+              <div className="group/button flex flex-row w-full sm:w-auto backdrop-blur-md bg-white/5 border border-white/10 shadow-[0_4px_18px_-4px_rgba(0,0,0,0.6)] rounded-xl divide-x divide-white/10 overflow-hidden">
+                <a
+                  href="#reservations"
+                  className="relative flex-1 px-8 py-4 text-[0.75rem] md:text-sm font-semibold tracking-wide uppercase text-white flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200 bg-red-600 hover:bg-red-500 active:bg-red-700 rounded-none first:rounded-l-xl"
+                >
+                  <span className="inline-block">Reservar</span>
+                  <span className="hidden md:inline-block">Mesa</span>
+                </a>
+                <a
+                  href="#menu"
+                  className="relative flex-1 px-8 py-4 text-[0.75rem] md:text-sm font-semibold tracking-wide uppercase flex items-center justify-center gap-2 text-red-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition duration-200 bg-white/0 hover:bg-white/5 rounded-none last:rounded-r-xl"
+                >
+                  <span>Ver Menú</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
