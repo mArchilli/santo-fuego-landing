@@ -19,7 +19,7 @@ export default function Hero(){
       <img
         src="/assets/argentine-grill-with-fire-and-meat-cooking--dark-a.jpg"
         alt="Carne asándose sobre parrilla con llamas vivas"
-        className="absolute inset-0 w-full h-full object-cover object-center brightness-95 grayscale"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         loading="eager"
         decoding="async"
       />
