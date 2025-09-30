@@ -28,11 +28,11 @@ export default function Footer(){
       </Helmet>
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
         <div>
-          <h3 className="font-semibold tracking-wide text-white mb-4">SANTO FUEGO</h3>
+          <h3 className="font-semibold tracking-wide text-red-500 mb-4">SANTO FUEGO</h3>
           <p className="text-sm text-white/70 leading-relaxed">Parrilla argentina contemporánea. Fuego, materia prima seleccionada y hospitalidad.</p>
         </div>
         <div>
-          <h4 className="font-semibold text-sm tracking-wide uppercase text-white/70 mb-3">Secciones</h4>
+          <h4 className="font-semibold text-sm tracking-wide uppercase text-red-500 mb-3">Secciones</h4>
           <ul className="space-y-2 text-sm">
             {['Inicio','Menú','Nosotros','Testimonios','Contacto','Reservas'].map(label => (
               <li key={label}><a href={`#${label.toLowerCase()==='inicio'?'hero':label.toLowerCase()}`} className="hover:text-red-400 transition">{label}</a></li>
@@ -40,7 +40,7 @@ export default function Footer(){
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-sm tracking-wide uppercase text-white/70 mb-3">Contacto</h4>
+          <h4 className="font-semibold text-sm tracking-wide uppercase text-red-500 mb-3">Contacto</h4>
           <ul className="space-y-2 text-sm text-white/70">
             <li>Bruselas 23, esq. Colectora Sur Acceso Oeste, Ituzaingó Buenos Aires</li>
             <li><p className="hover:text-red-400">+54 11 3603 - 9118</p></li>
@@ -50,7 +50,7 @@ export default function Footer(){
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-sm tracking-wide uppercase text-white/70 mb-3">Seguinos</h4>
+          <h4 className="font-semibold text-sm tracking-wide uppercase text-red-500 mb-3">Seguinos</h4>
           <div className="flex gap-4">
             { [
               {
