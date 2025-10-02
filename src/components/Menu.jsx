@@ -2,13 +2,18 @@ import React from 'react'
 
 export default function Menu(){
   return (
-    <section id="menu" className="relative py-28 bg-neutral-950 text-white" aria-labelledby="menu-heading">
+  <section id="menu" className="relative py-12 md:py-14 bg-neutral-950 text-white" aria-labelledby="menu-heading">
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(255,199,88,0.05),transparent)] pointer-events-none" aria-hidden="true"></div>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+  <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Columna izquierda: título + descripción + CTAs */}
           <div className="flex flex-col justify-center">
-            <h2 id="menu-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">Nuestro Menú</h2>
+            <h2
+              id="menu-heading"
+              className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3 text-red-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
+            >
+              Nuestro Menú
+            </h2>
             <p className="text-base md:text-lg text-white/70">
               Encontrá todos nuestros cortes, entradas, acompañamientos, postres y bebidas en un solo lugar.
             </p>
@@ -30,20 +35,20 @@ export default function Menu(){
             </ul>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-              {/* Botón principal: Descargar */}
+              {/* Botón principal: Descargar (coherente con primario Hero) */}
               <a
                 href="/assets/menu-santo-fuego.pdf"
                 download="menu-santo-fuego.pdf"
-                className="w-full sm:w-auto relative inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:-z-10 after:bg-accent hover:after:bg-red-600 after:blur-xl after:opacity-40 hover:after:opacity-60 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="group w-full sm:w-auto inline-flex justify-center items-center rounded-lg px-8 py-4 text-[0.75rem] md:text-sm font-semibold uppercase tracking-wide bg-red-600 text-white hover:bg-red-500 active:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200 shadow-[0_4px_14px_-4px_rgba(0,0,0,0.6)]"
               >
-                Descargar menú PDF
+                <span className="relative">Descargar menú PDF</span>
               </a>
-              {/* Botón secundario: Ver online (variante outline) */}
+              {/* Botón secundario: Ver online (outline translúcido similar a secundario Hero) */}
               <a
                 href="/assets/menu-santo-fuego.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide border border-white/20 text-white bg-transparent hover:text-red-400 hover:border-red-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70"
+                className="w-full sm:w-auto inline-flex justify-center items-center rounded-lg px-8 py-4 text-[0.75rem] md:text-sm font-semibold uppercase tracking-wide border border-white/15 bg-white/0 text-red-300 hover:text-white hover:border-white/40 hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200"
               >
                 Ver menú online
               </a>
@@ -53,10 +58,10 @@ export default function Menu(){
           </div>
 
           {/* Columna derecha: ilustración SVG directamente sobre el fondo */}
-          <div className="w-full h-[420px] md:h-[520px] flex items-center justify-center">
+          <div className="w-full h-[260px] md:h-[320px] flex items-center justify-center">
             <svg
               viewBox="0 0 600 420"
-              className="w-[90%] h-[90%] max-w-full max-h-full text-white/80"
+              className="w-[80%] h-[80%] max-w-full max-h-full text-white/80"
               role="img"
               aria-labelledby="menuSvgTitle menuSvgDesc"
             >
