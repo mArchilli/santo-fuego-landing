@@ -162,17 +162,27 @@ export default function Testimonials(){
         {!loading && list.length <= slidesPerView && (
           <div className="grid md:grid-cols-3 gap-8">
             {list.map(r => (
-              <figure key={r.id} className="relative rounded-2xl bg-gradient-to-b from-neutral-900 to-neutral-950 border border-white/10 p-8 flex flex-col shadow-[0_0_0_1px_rgba(255,255,255,0.05)] hover:shadow-[0_0_0_1px_rgba(255,199,88,0.4)] transition" itemScope itemType="https://schema.org/Review">
-                <blockquote className="text-sm md:text-base italic leading-relaxed text-white/85 mb-6" itemProp="reviewBody">“{r.text}”</blockquote>
-                <figcaption className="mt-auto flex items-center justify-between">
-                  <span className="font-semibold text-red-400" itemProp="author">{r.name}</span>
-                  <div className="flex items-center gap-1" aria-label={`Valoración ${r.rating} de 5`} itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+              <figure key={r.id} className="group relative rounded-2xl overflow-hidden bg-neutral-950/70 backdrop-blur-sm border border-white/10 p-7 pt-8 flex flex-col shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)] hover:shadow-[0_6px_16px_-4px_rgba(0,0,0,0.55)] hover:border-red-400/50 transition duration-300" itemScope itemType="https://schema.org/Review">
+                <span className="absolute left-0 top-0 h-1.5 w-full bg-red-500" aria-hidden="true" />
+                <div className="relative mb-6">
+                  <blockquote className="text-sm md:text-base leading-relaxed text-white/80 relative z-10 px-5 py-3" itemProp="reviewBody">
+                    <span className="absolute top-0 left-0 -translate-y-1 -translate-x-1 text-red-500/60 text-3xl md:text-4xl leading-none select-none" aria-hidden="true">“</span>
+                    {r.text}
+                    <span className="absolute bottom-0 right-0 translate-y-1 translate-x-1 text-red-500/60 text-3xl md:text-4xl leading-none select-none" aria-hidden="true">”</span>
+                  </blockquote>
+                </div>
+                <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between gap-4">
+                  <figcaption className="flex items-center gap-2 text-[0.8rem] md:text-sm">
+                    <span className="font-semibold text-red-400" itemProp="author">{r.name}</span>
+                  </figcaption>
+                  <div className="flex items-center gap-1 text-[0.7rem] md:text-sm" aria-label={`Valoración ${r.rating} de 5`} itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
                     <meta itemProp="ratingValue" content={r.rating} />
                     {Array.from({length:5}).map((_,i)=>(
-                      <span key={i} className={`text-sm ${i < r.rating ? 'text-red-400' : 'text-white/20'}`}>★</span>
+                      <span key={i} className={`${i < r.rating ? 'text-red-400' : 'text-white/15'}`}>★</span>
                     ))}
                   </div>
-                </figcaption>
+                </div>
+                <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_70%_20%,rgba(248,113,113,0.18),transparent_65%)]" aria-hidden="true"></div>
               </figure>
             ))}
           </div>
@@ -207,20 +217,30 @@ export default function Testimonials(){
               {trackSlides.map((r, i) => (
                 <div key={`${r.id}-${i}`} className="basis-full md:basis-1/3 shrink-0 px-0 md:px-4">
                   <figure
-                    className="h-full rounded-2xl bg-gradient-to-b from-neutral-900 to-neutral-950 border border-white/10 p-8 flex flex-col shadow-[0_0_0_1px_rgba(255,255,255,0.05)] hover:shadow-[0_0_0_1px_rgba(255,199,88,0.4)]"
+                    className="group h-full rounded-2xl overflow-hidden bg-neutral-950/70 backdrop-blur-sm border border-white/10 p-7 pt-8 flex flex-col shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)] hover:shadow-[0_6px_16px_-4px_rgba(0,0,0,0.55)] hover:border-red-400/50 transition duration-300"
                     itemScope
                     itemType="https://schema.org/Review"
                   >
-                    <blockquote className="text-sm md:text-base italic leading-relaxed text-white/85 mb-6" itemProp="reviewBody">“{r.text}”</blockquote>
-                    <figcaption className="mt-auto flex items-center justify-between">
-                      <span className="font-semibold text-red-400" itemProp="author">{r.name}</span>
-                      <div className="flex items-center gap-1" aria-label={`Valoración ${r.rating} de 5`} itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+                    <span className="absolute left-0 top-0 h-1.5 w-full bg-red-500" aria-hidden="true" />
+                    <div className="relative mb-6">
+                      <blockquote className="text-sm md:text-base leading-relaxed text-white/80 relative z-10 px-5 py-3" itemProp="reviewBody">
+                        <span className="absolute top-0 left-0 -translate-y-1 -translate-x-1 text-red-500/60 text-3xl md:text-4xl leading-none select-none" aria-hidden="true">“</span>
+                        {r.text}
+                        <span className="absolute bottom-0 right-0 translate-y-1 translate-x-1 text-red-500/60 text-3xl md:text-4xl leading-none select-none" aria-hidden="true">”</span>
+                      </blockquote>
+                    </div>
+                    <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between gap-4">
+                      <figcaption className="flex items-center gap-2 text-[0.8rem] md:text-sm">
+                        <span className="font-semibold text-red-400" itemProp="author">{r.name}</span>
+                      </figcaption>
+                      <div className="flex items-center gap-1 text-[0.7rem] md:text-sm" aria-label={`Valoración ${r.rating} de 5`} itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
                         <meta itemProp="ratingValue" content={r.rating} />
                         {Array.from({length:5}).map((_,j)=>(
-                          <span key={j} className={`text-sm ${j < r.rating ? 'text-red-400' : 'text-white/20'}`}>★</span>
+                          <span key={j} className={`${j < r.rating ? 'text-red-400' : 'text-white/15'}`}>★</span>
                         ))}
                       </div>
-                    </figcaption>
+                    </div>
+                    <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_70%_20%,rgba(248,113,113,0.18),transparent_65%)]" aria-hidden="true"></div>
                   </figure>
                 </div>
               ))}
