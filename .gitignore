@@ -46,3 +46,6 @@ logs/
 # Optional: Firebase emulators / local state
 .firebase/
 .firebaserc.local
+
+# Backups / artefactos manuales
+*.zip
