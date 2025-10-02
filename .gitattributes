@@ -1,0 +1,2 @@
+# Normalizar fin de linea a LF en el repo, convertir a CRLF en Windows si core.autocrlf está configurado
+* text=auto eol=lf
