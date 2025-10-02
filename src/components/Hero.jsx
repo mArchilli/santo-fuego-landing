@@ -29,54 +29,61 @@ export default function Hero(){
       {/* Contenido */}
       <div className="relative z-10 px-6 w-full max-w-5xl mx-auto text-center">
   <div className="flex flex-col items-center">
-          {/* <div className="mb-6 text-6xl md:text-7xl leading-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] select-none" aria-hidden="true">🔥</div> */}
-
-          {/* <h1
-            id="hero-heading"
-            className="font-extrabold tracking-tight text-[clamp(2.75rem,6vw,4.5rem)] leading-[1.05] drop-shadow-sm"
-          >
-            <span className="text-white">Santo</span>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-gold to-amber-500">Fuego</span>
-          </h1> */}
-
-          <h1 className="dramatic-text text-8xl md:text-9xl mb-8 uppercase">
+          <h1 className="dramatic-text text-8xl md:text-9xl mb-2 uppercase">
             SANTO
             <br />
             FUEGO
           </h1>
+          <p className="text-red-500 tracking-[0.18em] md:tracking-[0.28em] text-[0.7rem] md:text-sm font-semibold uppercase mb-8 select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_0_4px_rgba(0,0,0,0.55)]">
+            Parrilla. Carne. Vinos
+          </p>
 
           {/* Panel translúcido con texto y CTAs para mayor contraste sobre la imagen */}
           <div className="w-full max-w-3xl mx-auto ">
             <p className="text-xl md:text-2xl font-light text-white/80 leading-relaxed text-center">
               La pasión argentina por la parrilla se encuentra con la excelencia culinaria. Cada corte, cada llama, cada momento es una celebración del fuego sagrado.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="#reservations"
-                className="w-full sm:w-auto relative inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:-z-10 after:bg-accent hover:after:bg-red-600 after:blur-xl after:opacity-40 hover:after:opacity-60"
-              >
-                Reservar Mesa
-              </a>
-              <a
-                href="#menu"
-                className="w-full sm:w-auto inline-flex justify-center items-center rounded-lg px-8 py-4 text-sm font-semibold uppercase tracking-wide border border-white/70 text-white hover:bg-white/10 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
-              >
-                Ver Menú
-              </a>
+            {/* Botonera segmentada */}
+            <div className="mt-10 inline-flex flex-row items-stretch justify-center rounded-xl overflow-hidden relative max-w-full w-full sm:w-auto">
+              {/* Glow sutil detrás */}
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-red-600/25 via-red-500/10 to-transparent blur-xl" />
+              <div className="group/button flex flex-row w-full sm:w-auto backdrop-blur-md bg-white/5 border border-white/10 shadow-[0_4px_18px_-4px_rgba(0,0,0,0.6)] rounded-xl divide-x divide-white/10 overflow-hidden">
+                <a
+                  href="#reservations"
+                  className="relative flex-1 px-8 py-4 text-[0.75rem] md:text-sm font-semibold tracking-wide uppercase text-white flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200 bg-red-600 hover:bg-red-500 active:bg-red-700 rounded-none first:rounded-l-xl"
+                >
+                  <span className="inline-block">Reservar</span>
+                  <span className="hidden md:inline-block">Mesa</span>
+                </a>
+                <a
+                  href="#menu"
+                  className="relative flex-1 px-8 py-4 text-[0.75rem] md:text-sm font-semibold tracking-wide uppercase flex items-center justify-center gap-2 text-red-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition duration-200 bg-white/0 hover:bg-white/5 rounded-none last:rounded-r-xl"
+                >
+                  <span>Ver Menú</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Indicador de scroll */}
+      {/* Indicador de scroll (flecha sola) */}
       <a
         href="#menu"
-        className="group absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-wider font-medium text-white/60 hover:text-red-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60 rounded"
         aria-label="Ir al menú"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 inline-flex h-10 w-10 items-center justify-center text-white/85 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 rounded-full transition"
       >
-        <span className="relative flex h-9 w-5 items-start justify-center rounded-full border border-white/40 group-hover:border-red-400/70 transition">
-          <span className="mt-1 h-2 w-1 rounded-full bg-white/70 group-hover:bg-red-400 animate-pulse" />
-        </span>
-        Scroll
+        <svg
+          className="h-5 w-5 animate-bounce-slow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </a>
     </section>
   )

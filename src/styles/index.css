@@ -1,6 +1,10 @@
-/* Fuentes: Geist Sans (principal) y Geist Mono (monoespaciada) */
-@import url('@fontsource/geist-sans/latin.css');
-@import url('@fontsource/geist-mono/latin.css');
+/* Fuentes: Geist Sans (principal) y Geist Mono (monoespaciada)
+  Nota: @fontsource no expone un "latin.css" genérico en este paquete.
+  Se deben importar pesos/tamaños específicos. Documentación: https://fontsource.org/fonts/geist-sans
+  Ajusta los pesos según lo que realmente uses en la UI para reducir tamaño del bundle. */
+@import '@fontsource/geist-sans/400.css'; /* Regular */
+@import '@fontsource/geist-sans/700.css'; /* Bold */
+@import '@fontsource/geist-mono/400.css'; /* Mono Regular */
 
 @tailwind base;
 @tailwind components;
