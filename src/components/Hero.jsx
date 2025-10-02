@@ -29,19 +29,6 @@ export default function Hero(){
       {/* Contenido */}
       <div className="relative z-10 px-6 w-full max-w-5xl mx-auto text-center">
   <div className="flex flex-col items-center">
-<<<<<<< HEAD
-=======
-          {/* <div className="mb-6 text-6xl md:text-7xl leading-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] select-none" aria-hidden="true">🔥</div> */}
-
-          {/* <h1
-            id="hero-heading"
-            className="font-extrabold tracking-tight text-[clamp(2.75rem,6vw,4.5rem)] leading-[1.05] drop-shadow-sm"
-          >
-            <span className="text-white">Santo</span>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-gold to-amber-500">Fuego</span>
-          </h1> */}
-
->>>>>>> 4dea16635b40284aeeaf67bf776c21aaf9dd9947
           <h1 className="dramatic-text text-8xl md:text-9xl mb-2 uppercase">
             SANTO
             <br />
