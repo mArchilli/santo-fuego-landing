@@ -85,14 +85,25 @@ export default function ReservationForm(){
     <section id="reservations" className="relative py-28 bg-neutral-900 text-white" aria-labelledby="reservation-heading">
       <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,rgba(255,199,88,0.05),transparent)] opacity-70" aria-hidden="true"></div>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
-        <div className="flex flex-col justify-center">
-          <h2 id="reservation-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">Reservá tu mesa</h2>
-          <p className="text-white/75 leading-relaxed mb-6">Garantizá tu lugar y viví la experiencia completa de nuestra parrilla. Reservas para grupos, fechas especiales y celebraciones.</p>
-          <ul className="space-y-4 text-sm text-white/75">
-            <li className="flex gap-3"><span className="text-red-400">•</span> Confirmación inmediata al enviar el formulario.</li>
-            <li className="flex gap-3"><span className="text-red-400">•</span> Para eventos privados, indicá detalles en notas.</li>
-            <li className="flex gap-3"><span className="text-red-400">•</span> Recomendamos llegar 10 minutos antes.</li>
+        <div className="flex flex-col justify-center relative">
+          <h2 id="reservation-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <span className="text-red-400">Reservá</span> tu mesa
+          </h2>
+          <p className="text-white/75 leading-relaxed mb-6 max-w-xl">Garantizá tu lugar y viví la experiencia completa de nuestra parrilla. Reservas para grupos, fechas especiales y celebraciones.</p>
+          <ul className="space-y-3 text-sm text-white/75">
+            {[
+              'Confirmación inmediata al enviar el formulario.',
+              'Para eventos privados, indicá detalles en notas.',
+              'Recomendamos llegar 10 minutos antes.'
+            ].map((txt, i) => (
+              <li key={i} className="relative pl-5">
+                <span className="absolute left-0 top-2 inline-block w-2 h-2 rounded-sm bg-red-500/70 ring-1 ring-red-400/30" />
+                {txt}
+              </li>
+            ))}
           </ul>
+          <div className="mt-8 h-px w-full max-w-sm lg:w-48 bg-white/15" aria-hidden="true" />
+          <p className="mt-5 text-xs uppercase tracking-[0.22em] text-white/45 font-medium">Atención personalizada</p>
         </div>
         <form onSubmit={handleSubmit} className="relative p-8 rounded-3xl bg-white/[0.05] backdrop-blur-sm border border-white/10 shadow-xl" aria-describedby="reservation-status">
           <div className="grid gap-5">
