@@ -1,2 +1,9 @@
 # Normalizar fin de linea a LF en el repo, convertir a CRLF en Windows si core.autocrlf está configurado
 * text=auto eol=lf
+
+# Tratar imágenes y binarios sin conversión de EOL
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.pdf binary
+*.ico binary
