@@ -18,7 +18,7 @@ export default function Contact(){
         <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-start">
           {/* Columna de tarjetas informativas */}
           <div className="space-y-6">
-            <Card className="border border-red-500/25 hover:border-red-500/50 transition-colors">
+            <Card className="border border-red-500/30 hover:border-red-500/60 transition-colors">
               <CardContent>
                 <div className="flex items-start gap-4">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/15 text-accent text-sm ring-1 ring-accent/30">📞</span>
@@ -31,7 +31,7 @@ export default function Contact(){
                 </div>
               </CardContent>
             </Card>
-            <Card className="border border-red-500/25 hover:border-red-500/50 transition-colors">
+            <Card className="border border-red-500/30 hover:border-red-500/60 transition-colors">
               <CardContent>
                 <div className="flex items-start gap-4">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/15 text-accent text-sm ring-1 ring-accent/30">✉️</span>
@@ -45,7 +45,7 @@ export default function Contact(){
                 </div>
               </CardContent>
             </Card>
-            <Card className="border border-red-500/25 hover:border-red-500/50 transition-colors">
+            <Card className="border border-red-500/30 hover:border-red-500/60 transition-colors">
               <CardContent>
                 <div className="flex items-start gap-4">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/15 text-accent text-sm ring-1 ring-accent/30">🕒</span>
@@ -63,7 +63,7 @@ export default function Contact(){
             </Card>
           </div>
           {/* Mapa */}
-          <Card className="h-[460px] flex flex-col border border-red-500/25 hover:border-red-500/50 transition-colors">
+          <Card className="h-[460px] flex flex-col border border-red-500/30 hover:border-red-500/60 transition-colors">
             <div className="flex-1 relative rounded-lg overflow-hidden bg-black/40 border border-white/5">
               <iframe
                 title="Mapa Interactivo Santo Fuego"
