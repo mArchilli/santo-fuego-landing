@@ -25,8 +25,9 @@ export default function Events(){
   return (
   <section id="events" className="relative pt-10 pb-24 bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 text-white" aria-labelledby="events-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.05),transparent_60%)] opacity-40" aria-hidden="true" />
-  <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-        <div>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+        <div className="lg:order-2">
+          <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
           <h2 id="events-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
             <span className="text-red-400">Eventos</span> a tu medida
           </h2>
@@ -50,8 +51,9 @@ export default function Events(){
               <span className="relative">Consultar por WhatsApp</span>
             </a>
           </div>
+          </div>
         </div>
-  <div className="relative -mt-2 sm:mt-0">
+  <div className="relative -mt-2 sm:mt-0 lg:order-1">
           {/* Carrusel vista tablet y desktop */}
           <div className="hidden sm:block relative group">
             <div className="absolute -inset-2 bg-gradient-to-tr from-gold/20 via-amber-600/10 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition" aria-hidden="true"></div>
