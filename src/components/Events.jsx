@@ -23,11 +23,10 @@ export default function Events(){
   }, [images.length])
   const whatsapp = 'https://wa.me/541136039118?text=' + encodeURIComponent('¡Hola! Me gustaría consultar por eventos en Santo Fuego (empresariales, familiares, cenas).')
   return (
-    <section id="events" className="relative py-28 bg-neutral-950 text-white" aria-labelledby="events-heading">
+  <section id="events" className="relative pt-10 pb-24 bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 text-white" aria-labelledby="events-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.05),transparent_60%)] opacity-40" aria-hidden="true" />
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+  <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-white/40 mb-3">Servicios</p>
           <h2 id="events-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
             <span className="text-red-400">Eventos</span> a tu medida
           </h2>
@@ -40,23 +39,23 @@ export default function Events(){
             <li className="flex gap-3"><span className="text-red-400">•</span> Reservas para grupos y fechas especiales.</li>
             <li className="flex gap-3"><span className="text-red-400">•</span> Opciones para ambientación y tiempos del servicio.</li>
           </ul>
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <a
               href={whatsapp}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-[0.75rem] md:text-sm font-semibold uppercase tracking-wide bg-red-600 text-white hover:bg-red-500 active:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 transition-colors duration-200 shadow-[0_4px_14px_-4px_rgba(0,0,0,0.6)]"
               aria-label="Consultar eventos por WhatsApp"
             >
-              <span>Consultar por WhatsApp</span>
+              <span className="relative">Consultar por WhatsApp</span>
             </a>
           </div>
         </div>
-        <div className="relative">
+  <div className="relative -mt-2 sm:mt-0">
           {/* Carrusel vista tablet y desktop */}
           <div className="hidden sm:block relative group">
             <div className="absolute -inset-2 bg-gradient-to-tr from-gold/20 via-amber-600/10 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition" aria-hidden="true"></div>
-            <div className="relative w-full h-[420px] md:h-[520px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+            <div className="relative w-full h-[360px] md:h-[440px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
               {images.map((img, idx) => (
                 <img
                   key={img.src}
@@ -102,7 +101,7 @@ export default function Events(){
 
           {/* Carrusel mobile */}
           <div
-            className="block sm:hidden relative group w-full h-[420px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 select-none touch-pan-y"
+            className="block sm:hidden relative group w-full h-[320px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 select-none touch-pan-y"
             onTouchStart={(e) => {
               if (e.touches && e.touches.length > 0) {
                 touchStartX.current = e.touches[0].clientX

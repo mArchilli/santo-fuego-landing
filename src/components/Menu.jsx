@@ -10,9 +10,9 @@ export default function Menu(){
           <div className="flex flex-col justify-center">
             <h2
               id="menu-heading"
-              className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3 text-red-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
+              className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
             >
-              Nuestro Menú
+              <span className="text-white">Nuestro</span> <span className="text-red-400">Menú</span>
             </h2>
             <p className="text-base md:text-lg text-white/70">
               Encontrá todos nuestros cortes, entradas, acompañamientos, postres y bebidas en un solo lugar.
