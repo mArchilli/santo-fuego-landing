@@ -25,9 +25,9 @@ export default function Events(){
   return (
   <section id="events" className="relative pt-10 pb-24 bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 text-white" aria-labelledby="events-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.05),transparent_60%)] opacity-40" aria-hidden="true" />
-  <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+  <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-20 items-stretch">
         <div className="lg:order-2">
-          <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+          <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.25)] lg:h-[440px] lg:flex lg:flex-col">
           <h2 id="events-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
             <span className="text-red-400">Eventos</span> a tu medida
           </h2>
@@ -40,7 +40,7 @@ export default function Events(){
             <li className="flex gap-3"><span className="text-red-400">•</span> Reservas para grupos y fechas especiales.</li>
             <li className="flex gap-3"><span className="text-red-400">•</span> Opciones para ambientación y tiempos del servicio.</li>
           </ul>
-          <div className="mt-6 sm:mt-8">
+          <div className="mt-6 sm:mt-8 lg:mt-auto">
             <a
               href={whatsapp}
               target="_blank"
