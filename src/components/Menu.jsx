@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Menu(){
   return (
-  <section id="menu" className="relative h-screen bg-neutral-950 text-white flex items-center justify-center" aria-labelledby="menu-heading">
+  <section id="menu" className="relative min-h-screen bg-neutral-950 text-white flex md:items-center md:justify-center" aria-labelledby="menu-heading">
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(255,199,88,0.05),transparent)] pointer-events-none" aria-hidden="true"></div>
-      <div className="max-w-7xl mx-auto px-6 w-full">
-  <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 w-full py-8 md:py-12">
+  <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start md:items-center">
           {/* Columna izquierda: título + descripción + CTAs */}
           <div className="flex flex-col justify-center">
             <h2
