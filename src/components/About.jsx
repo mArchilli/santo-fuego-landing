@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About(){
   return (
-  <section id="about" className="relative pt-12 pb-28 bg-gradient-to-b from-neutral-950 via-black to-neutral-900 text-white" aria-labelledby="about-heading">
+  <section id="about" className="relative h-screen bg-gradient-to-b from-neutral-950 via-black to-neutral-900 text-white flex items-center justify-center" aria-labelledby="about-heading">
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,white,transparent_70%)] pointer-events-none" aria-hidden="true"></div>
-      <div className="max-w-5xl mx-auto px-6 grid gap-10 items-start">
+      <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div className="relative">
           <h2 id="about-heading" className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight mb-6">Tradición que se <span className="text-red-400">enciende</span> en cada servicio</h2>
           <p className="text-lg text-white/85 mb-6 font-light">
