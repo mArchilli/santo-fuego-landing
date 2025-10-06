@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Menu(){
   return (
-  <section id="menu" className="relative py-12 md:py-14 bg-neutral-950 text-white" aria-labelledby="menu-heading">
+  <section id="menu" className="relative h-screen bg-neutral-950 text-white flex items-center justify-center" aria-labelledby="menu-heading">
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(255,199,88,0.05),transparent)] pointer-events-none" aria-hidden="true"></div>
-      <div className="max-w-7xl mx-auto px-6">
-  <div className="grid lg:grid-cols-2 gap-8 items-start">
+      <div className="max-w-7xl mx-auto px-6 w-full">
+  <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Columna izquierda: título + descripción + CTAs */}
           <div className="flex flex-col justify-center">
             <h2
@@ -16,6 +16,12 @@ export default function Menu(){
             </h2>
             <p className="text-base md:text-lg text-white/70">
               Encontrá todos nuestros cortes, entradas, acompañamientos, postres y bebidas en un solo lugar.
+            </p>
+
+            {/* Texto adicional para contexto */}
+            <p className="mt-3 text-sm md:text-base text-white/60 max-w-xl">
+              Entre nuestros favoritos: asado de tira, ojo de bife, provoleta a la leña y flan casero con dulce.
+              Cada plato busca equilibrio entre brasa, punto y presentación.
             </p>
 
             {/* Bloque informativo con bullets (restaurado) */}
@@ -57,80 +63,71 @@ export default function Menu(){
             <p className="mt-4 text-xs text-white/50">Tamaño aprox. del archivo: 1–3 MB. Requiere visor PDF.</p>
           </div>
 
-          {/* Columna derecha: ilustración SVG directamente sobre el fondo */}
-          <div className="w-full h-[260px] md:h-[320px] flex items-center justify-center">
+          {/* Columna derecha: ilustración pulida con glow y overlay */}
+          <div className="relative group w-full h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+            <div className="absolute -inset-2 bg-gradient-to-tr from-gold/20 via-amber-600/10 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition" aria-hidden="true"></div>
             <svg
-              viewBox="0 0 600 420"
-              className="w-[80%] h-[80%] max-w-full max-h-full text-white/80"
+              viewBox="0 0 640 420"
+              className="absolute inset-0 w-full h-full text-white/85"
               role="img"
               aria-labelledby="menuSvgTitle menuSvgDesc"
             >
-              <title id="menuSvgTitle">Ilustración de parrilla argentina</title>
-              <desc id="menuSvgDesc">Brasas y llama sobre una parrilla, representando la cocina a las brasas.</desc>
+              <title id="menuSvgTitle">Parrilla con brasas y cortes</title>
+              <desc id="menuSvgDesc">Una parrilla sencilla con rejilla, brasas y una llama sutil, representando la cocina a las brasas.</desc>
               <defs>
-                <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#f87171"/>
-                  <stop offset="65%" stopColor="#ef4444"/>
+                <linearGradient id="m_flame" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#fca5a5"/>
+                  <stop offset="55%" stopColor="#ef4444"/>
                   <stop offset="100%" stopColor="#f59e0b"/>
                 </linearGradient>
-                <radialGradient id="glowGrad" cx="50%" cy="40%" r="60%">
-                  <stop offset="0%" stopColor="#ef4444" stopOpacity="0.35"/>
+                <radialGradient id="m_glow" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stopColor="#ef4444" stopOpacity="0.3"/>
                   <stop offset="70%" stopColor="#ef4444" stopOpacity="0.12"/>
                   <stop offset="100%" stopColor="#ef4444" stopOpacity="0"/>
                 </radialGradient>
               </defs>
 
-              {/* Resplandor */}
-              <ellipse cx="300" cy="190" rx="170" ry="120" fill="url(#glowGrad)"/>
+              {/* Resplandor general */}
+              <ellipse cx="320" cy="210" rx="210" ry="140" fill="url(#m_glow)"/>
 
-              {/* Borde de la parrilla */}
-              <ellipse cx="300" cy="240" rx="200" ry="60" fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="3"/>
-
-              {/* Rejilla */}
+              {/* Rejilla elíptica */}
+              <ellipse cx="320" cy="250" rx="210" ry="62" fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="3"/>
               <g stroke="currentColor" strokeOpacity="0.25" strokeWidth="2">
-                <line x1="140" y1="220" x2="460" y2="220"/>
-                <line x1="140" y1="235" x2="460" y2="235"/>
-                <line x1="140" y1="250" x2="460" y2="250"/>
-                <line x1="140" y1="265" x2="460" y2="265"/>
-                {/* Barras verticales sutiles */}
-                <line x1="200" y1="210" x2="200" y2="270"/>
-                <line x1="260" y1="210" x2="260" y2="270"/>
-                <line x1="320" y1="210" x2="320" y2="270"/>
-                <line x1="380" y1="210" x2="380" y2="270"/>
+                <line x1="140" y1="230" x2="500" y2="230"/>
+                <line x1="140" y1="245" x2="500" y2="245"/>
+                <line x1="140" y1="260" x2="500" y2="260"/>
+                <line x1="140" y1="275" x2="500" y2="275"/>
+                <line x1="200" y1="220" x2="200" y2="285"/>
+                <line x1="260" y1="220" x2="260" y2="285"/>
+                <line x1="320" y1="220" x2="320" y2="285"/>
+                <line x1="380" y1="220" x2="380" y2="285"/>
+                <line x1="440" y1="220" x2="440" y2="285"/>
               </g>
 
-              {/* Cuerpo/mesa */}
-              <ellipse cx="300" cy="270" rx="185" ry="35" fill="currentColor" opacity="0.06"/>
+              {/* Cuerpo/mesa sutil */}
+              <ellipse cx="320" cy="290" rx="195" ry="36" fill="currentColor" opacity="0.06"/>
 
-              {/* Patas de la parrilla */}
+              {/* Patas */}
               <g stroke="currentColor" strokeOpacity="0.35" strokeWidth="6" strokeLinecap="round">
-                <line x1="210" y1="285" x2="210" y2="345"/>
-                <line x1="390" y1="285" x2="390" y2="345"/>
+                <line x1="220" y1="305" x2="220" y2="360"/>
+                <line x1="420" y1="305" x2="420" y2="360"/>
               </g>
 
-              {/* Llama central */}
+              {/* Llama simple */}
               <g>
-                <path
-                  d="M300 130c-38 26-48 58-26 86 18 24 60 26 81 2 22-25 8-60-24-90 4 22-6 30-31 2z"
-                  fill="url(#flameGrad)"
-                />
-                {/* Llamas secundarias */}
-                <path d="M260 165c-16 12-18 28-8 42 9 13 31 14 42 1 11-13 3-32-18-51 3 12-3 16-16 0z" fill="url(#flameGrad)" opacity="0.85"/>
-                <path d="M352 170c-14 10-16 24-7 36 8 11 27 12 36 1 10-11 4-27-15-43 3 10-2 13-14 0z" fill="url(#flameGrad)" opacity="0.85"/>
+                <path d="M320 150c-30 20-38 46-20 68 14 19 46 21 62 2 17-19 6-47-18-72 3 17-4 24-24 2z" fill="url(#m_flame)"/>
+                <path d="M292 175c-12 9-14 21-6 31 7 10 24 11 32 1 8-10 3-24-14-39 2 9-3 12-12 0z" fill="url(#m_flame)" opacity="0.85"/>
+                <path d="M356 178c-10 8-12 18-5 27 6 8 20 9 27 1 7-8 3-21-11-33 2 8-2 10-11 0z" fill="url(#m_flame)" opacity="0.85"/>
               </g>
 
-              {/* Utensilios: tenedor y espátula */}
-              <g stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.6">
-                {/* Tenedor */}
-                <path d="M98 120v38M112 120v38M84 120v38" />
-                <path d="M84 158h28v92c0 10-8 18-18 18h-2c-10 0-18-8-18-18v-44" />
-                {/* Espátula */}
-                <rect x="470" y="120" width="42" height="44" rx="6" fill="currentColor" opacity="0.08" />
-                <rect x="470" y="120" width="42" height="44" rx="6" fill="none" stroke="currentColor"/>
-                <path d="M491 164v74" />
-                <path d="M491 238c0 10 8 18 18 18" opacity="0.5"/>
+              {/* Corte de carne estilizado */}
+              <g>
+                <rect x="260" y="215" width="120" height="34" rx="8" fill="currentColor" opacity="0.08" />
+                <rect x="260" y="215" width="120" height="34" rx="8" fill="none" stroke="currentColor" strokeOpacity="0.5"/>
+                <path d="M275 232h90" stroke="currentColor" strokeOpacity="0.3" strokeWidth="2"/>
               </g>
             </svg>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent pointer-events-none" aria-hidden="true"></div>
           </div>
         </div>
       </div>
