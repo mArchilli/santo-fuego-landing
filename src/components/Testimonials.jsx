@@ -6,7 +6,7 @@ export default function Testimonials(){
     { id:'f1', name:'Lucía', text:'La mejor provoleta y atención impecable.', rating:5 },
     { id:'f2', name:'Martín', text:'Carnes perfectas y ambiente cálido.', rating:5 },
     { id:'f3', name:'Soledad', text:'Experiencia completa, volveré pronto.', rating:4 },
-    { id:'f4', name:'Liliana Kocmann', text:'Muy buena atención! Comida excelente!', rating:4 },
+    { id:'f4', name:'Liliana', text:'Muy buena atención! Comida excelente!', rating:4 },
     { id:'f5', name:'Daniela', text:'Muy amables y si tenes suerte te visita su gatita preciosa 💖.', rating:5 },
     { id:'f6', name:'Ana Lopez', text:'Un lugar excelente 👌 y muy buena atención…', rating:5 },
   ]
@@ -113,7 +113,7 @@ export default function Testimonials(){
   }
 
   return (
-  <section id="testimonials" className="relative min-h-screen bg-black text-white flex md:items-center md:justify-center" aria-labelledby="testimonials-heading">
+  <section id="testimonials" className="relative md:min-h-screen bg-black text-white flex md:items-center md:justify-center" aria-labelledby="testimonials-heading">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,191,88,0.12),transparent_70%)] opacity-40" aria-hidden="true"></div>
       <div className="max-w-7xl mx-auto px-6 w-full py-8 md:py-14">
         <div className="text-center mb-14 max-w-3xl mx-auto">
