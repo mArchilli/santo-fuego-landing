@@ -3,11 +3,11 @@ import { Card, CardContent } from './ui/Card'
 
 export default function Contact(){
   return (
-    <section id="contact" className="relative py-32 bg-neutral-950 text-white" aria-labelledby="contact-heading">
+    <section id="contact" className="relative h-screen bg-neutral-950 text-white flex items-center justify-center overflow-y-auto md:overflow-visible" aria-labelledby="contact-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,199,88,0.10),transparent_70%)] opacity-40" aria-hidden="true"></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <header className="text-center max-w-3xl mx-auto mb-16">
-          <h2 id="contact-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight">
+  <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-10 md:py-14">
+        <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+          <h2 id="contact-heading" className="text-2xl md:text-4xl font-extrabold tracking-tight">
             Visitános en <span className="text-red-400">Santo Fuego</span>
           </h2>
           <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">
@@ -15,7 +15,7 @@ export default function Contact(){
             de la parrilla argentina en un ambiente cálido y familiar.
           </p>
         </header>
-        <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Columna de tarjetas informativas */}
           <div className="space-y-6">
             <Card className="border border-red-500/30 hover:border-red-500/60 transition-colors">
@@ -63,7 +63,7 @@ export default function Contact(){
             </Card>
           </div>
           {/* Mapa */}
-          <Card className="h-[460px] flex flex-col border border-red-500/30 hover:border-red-500/60 transition-colors">
+          <Card className="h-[340px] md:h-[400px] lg:h-[460px] flex flex-col border border-red-500/30 hover:border-red-500/60 transition-colors">
             <div className="flex-1 relative rounded-lg overflow-hidden bg-black/40 border border-white/5">
               <iframe
                 title="Mapa Interactivo Santo Fuego"
