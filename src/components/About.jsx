@@ -6,9 +6,9 @@ export default function About(){
     alt: 'Cortes a la parrilla con fuego intenso'
   }
   return (
-  <section id="about" className="relative h-screen bg-gradient-to-b from-neutral-950 via-black to-neutral-900 text-white flex items-center justify-center" aria-labelledby="about-heading">
+  <section id="about" className="relative min-h-screen bg-gradient-to-b from-neutral-950 via-black to-neutral-900 text-white flex md:items-center md:justify-center" aria-labelledby="about-heading">
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,white,transparent_70%)] pointer-events-none" aria-hidden="true"></div>
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-8 md:py-12 grid lg:grid-cols-2 gap-8 md:gap-10 items-start md:items-center">
         {/* Columna izquierda: contenido existente */}
         <div className="relative order-1 max-w-xl">
           <h2 id="about-heading" className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-4 md:mb-6">Pasión por la <span className="text-red-400">brasa</span></h2>

@@ -1,25 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { db } from '../config/firebase'
-import { collection, getDocs } from 'firebase/firestore'
 
 export default function Testimonials(){
-  const [reviews, setReviews] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    let active = true
-    const fetchReviews = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, 'testimonials'))
-        if (!active) return
-        setReviews(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchReviews()
-    return () => { active = false }
-  }, [])
 
   const fallback = [
     { id:'f1', name:'Lucía', text:'La mejor provoleta y atención impecable.', rating:5 },
@@ -30,7 +11,7 @@ export default function Testimonials(){
     { id:'f6', name:'Ana Lopez', text:'Un lugar excelente 👌 y muy buena atención…', rating:5 },
   ]
 
-  const list = reviews.length ? reviews : (!loading ? fallback : [])
+  const list = fallback
 
   // Config carrusel: dinámico por breakpoint (1 en mobile, 3 en desktop)
   const [slidesPerView, setSlidesPerView] = useState(3)
@@ -69,23 +50,25 @@ export default function Testimonials(){
 
   // Init/reset cuando hay datos o cambia el breakpoint
   useEffect(() => {
-    if (!loading && list.length > slidesPerView) {
+    if (list.length > slidesPerView) {
       setDisableTransition(true)
       setIndex(slidesPerView)
       const t = setTimeout(() => setDisableTransition(false), 20)
       startAuto()
       return () => { clearTimeout(t); stopAuto() }
+    } else {
+      stopAuto()
     }
-  }, [loading, list.length, slidesPerView])
+  }, [list.length, slidesPerView])
 
   // Slides con clones para loop infinito (clona slidesPerView a cada lado)
-  const trackSlides = (!loading && list.length > slidesPerView)
+  const trackSlides = (list.length > slidesPerView)
     ? [...list.slice(-slidesPerView), ...list, ...list.slice(0, slidesPerView)]
     : []
 
   // Reset al cruzar clones
   const handleTransitionEnd = () => {
-    if (loading || list.length <= slidesPerView) return
+    if (list.length <= slidesPerView) return
     const N = list.length
     if (index >= N + slidesPerView) {
       setDisableTransition(true)
@@ -130,9 +113,9 @@ export default function Testimonials(){
   }
 
   return (
-    <section id="testimonials" className="relative py-28 bg-black text-white" aria-labelledby="testimonials-heading">
+  <section id="testimonials" className="relative min-h-screen bg-black text-white flex md:items-center md:justify-center" aria-labelledby="testimonials-heading">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,191,88,0.12),transparent_70%)] opacity-40" aria-hidden="true"></div>
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 w-full py-8 md:py-14">
         <div className="text-center mb-14 max-w-3xl mx-auto">
           <span className="inline-block mb-3 text-[0.7rem] tracking-[0.28em] font-semibold uppercase text-red-400/80">Testimonios</span>
           <h2 id="testimonials-heading" className="text-3xl md:text-[2.75rem] font-extrabold leading-tight tracking-tight mb-5">
@@ -143,23 +126,8 @@ export default function Testimonials(){
           </p>
         </div>
 
-        {/* Skeletons */}
-        {loading && (
-          <div className="grid md:grid-cols-3 gap-8">
-            {Array.from({length:3}).map((_,i)=>(
-              <div key={i} className="animate-pulse rounded-2xl bg-white/[0.05] border border-white/10 p-6 h-56 flex flex-col">
-                <div className="h-4 w-2/3 bg-white/10 rounded mb-4"></div>
-                <div className="h-3 w-full bg-white/10 rounded mb-2"></div>
-                <div className="h-3 w-5/6 bg-white/10 rounded mb-2"></div>
-                <div className="h-3 w-4/6 bg-white/10 rounded mb-4"></div>
-                <div className="h-4 w-24 bg-white/10 rounded mt-auto"></div>
-              </div>
-            ))}
-          </div>
-        )}
-
         {/* Si hay <= slidesPerView: grilla estática */}
-        {!loading && list.length <= slidesPerView && (
+        {list.length <= slidesPerView && (
           <div className="grid md:grid-cols-3 gap-8">
             {list.map(r => (
               <figure key={r.id} className="group relative rounded-2xl overflow-hidden bg-neutral-950/70 backdrop-blur-sm border border-white/10 p-7 pt-8 flex flex-col shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)] hover:shadow-[0_6px_16px_-4px_rgba(0,0,0,0.55)] hover:border-red-400/50 transition duration-300" itemScope itemType="https://schema.org/Review">
@@ -189,7 +157,7 @@ export default function Testimonials(){
         )}
 
         {/* Carrusel infinito (mobile 1 card, desktop 3 cards) */}
-        {!loading && list.length > slidesPerView && (
+        {list.length > slidesPerView && (
           <div
             ref={containerRef}
             className={`overflow-hidden md:-mx-4 ${dragging ? 'select-none' : ''}`}

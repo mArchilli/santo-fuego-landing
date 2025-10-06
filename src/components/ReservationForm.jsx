@@ -82,9 +82,9 @@ export default function ReservationForm(){
   }
 
   return (
-    <section id="reservations" className="relative h-screen bg-neutral-900 text-white flex items-center justify-center overflow-y-auto md:overflow-visible" aria-labelledby="reservation-heading">
+  <section id="reservations" className="relative min-h-screen bg-neutral-900 text-white flex md:items-center md:justify-center" aria-labelledby="reservation-heading">
       <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,rgba(255,199,88,0.05),transparent)] opacity-70" aria-hidden="true"></div>
-      <div className="max-w-6xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-6 w-full py-8 md:py-12 grid lg:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
         <div className="flex flex-col justify-center relative">
           <h2 id="reservation-heading" className="text-2xl md:text-4xl font-extrabold tracking-tight mb-4 md:mb-5">
             <span className="text-red-400">Reservá</span> tu mesa

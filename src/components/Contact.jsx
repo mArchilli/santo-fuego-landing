@@ -3,7 +3,7 @@ import { Card, CardContent } from './ui/Card'
 
 export default function Contact(){
   return (
-    <section id="contact" className="relative h-screen bg-neutral-950 text-white flex items-center justify-center overflow-y-auto md:overflow-visible" aria-labelledby="contact-heading">
+  <section id="contact" className="relative min-h-screen bg-neutral-950 text-white flex items-center justify-center" aria-labelledby="contact-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,199,88,0.10),transparent_70%)] opacity-40" aria-hidden="true"></div>
   <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-10 md:py-14">
         <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
