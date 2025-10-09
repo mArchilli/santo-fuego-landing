@@ -10,12 +10,12 @@ export default function About(){
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,white,transparent_70%)] pointer-events-none" aria-hidden="true"></div>
     <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-8 md:py-12 grid lg:grid-cols-2 gap-8 md:gap-10 items-start md:items-center">
         {/* Columna izquierda: contenido existente */}
-        <div className="relative order-1 max-w-xl">
-          <h2 id="about-heading" className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-4 md:mb-6">Pasión por la <span className="text-red-400">brasa</span></h2>
-          <p className="text-base md:text-lg text-white/85 mb-5 md:mb-6 font-light">
+        <div className="relative order-1 max-w-2xl">
+          <h2 id="about-heading" className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight mb-5 md:mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.55)]">Pasión por la <span className="text-red-400">brasa</span></h2>
+          <p className="text-lg md:text-xl text-white/85 mb-6 md:mb-7 font-light leading-relaxed">
             En <span className="text-red-400 font-semibold">SANTO FUEGO</span> defendemos el ritual del asado: <span className="text-red-400 font-semibold">paciencia</span>, <span className="text-red-400 font-semibold">brasa justa</span> y <span className="text-red-400 font-semibold">cortes nobles</span>. Nuestra cocina honra la esencia de la parrilla argentina, fusionando técnicas clásicas con un servicio contemporáneo.
           </p>
-          <ul className="grid sm:grid-cols-2 gap-4 mb-8 md:mb-10">
+          <ul className="grid sm:grid-cols-2 gap-5 mb-10 md:mb-14">
             {[
               {title:'Cortes Premium',desc:'Selección certificada y maduración controlada.'},
               {title:'Vinos Argentinos',desc:'Maridajes pensados para cada corte.'},
@@ -24,14 +24,14 @@ export default function About(){
             ].map(f => (
               <li key={f.title} className="group relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-red-400/60 transition overflow-hidden">
                 <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-red-500/10 via-red-500/0 to-transparent" aria-hidden="true" />
-                <p className="relative flex items-center gap-2 font-semibold text-red-400 mb-2 tracking-wide text-sm md:text-base">
+                <p className="relative flex items-center gap-2 font-semibold text-red-400 mb-2 tracking-wide text-sm md:text-[0.95rem]">
                   <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-red-400 via-red-500 to-amber-400 shadow-[0_0_6px_rgba(248,113,113,0.6)] ring-1 ring-red-400/40" aria-hidden="true" />
                   <span className="relative">
                     {f.title}
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-red-400 via-amber-400 to-red-500 transition-all duration-500 ease-out" aria-hidden="true" />
                   </span>
                 </p>
-                <p className="text-sm text-white/70 leading-relaxed group-hover:text-white/80 transition-colors duration-300">{f.desc}</p>
+                <p className="text-[0.8rem] sm:text-sm text-white/70 leading-relaxed group-hover:text-white/80 transition-colors duration-300">{f.desc}</p>
               </li>
             ))}
           </ul>
