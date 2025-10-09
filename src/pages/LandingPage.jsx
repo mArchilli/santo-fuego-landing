@@ -15,8 +15,8 @@ export default function LandingPage(){
       {/* <Header /> */}
       <Hero />
       <About />
-    <Events />
-    <Menu />
+      <Menu />
+      <Events />
     <Testimonials />
       <ReservationForm />
       <Contact />
