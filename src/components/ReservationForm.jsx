@@ -85,12 +85,12 @@ export default function ReservationForm(){
   <section id="reservations" className="relative min-h-screen bg-neutral-900 text-white flex md:items-center md:justify-center" aria-labelledby="reservation-heading">
       <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,rgba(255,199,88,0.05),transparent)] opacity-70" aria-hidden="true"></div>
       <div className="max-w-6xl mx-auto px-6 w-full py-8 md:py-12 grid lg:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
-        <div className="flex flex-col justify-center relative">
-          <h2 id="reservation-heading" className="text-2xl md:text-4xl font-extrabold tracking-tight mb-4 md:mb-5">
+        <div className="flex flex-col justify-center relative max-w-2xl">
+          <h2 id="reservation-heading" className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 md:mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.55)]">
             <span className="text-red-400">Reservá</span> tu mesa
           </h2>
-          <p className="text-white/75 leading-relaxed mb-5 md:mb-6 max-w-xl text-sm md:text-base">Garantizá tu lugar y viví la experiencia completa de nuestra parrilla. Reservas para grupos, fechas especiales y celebraciones.</p>
-          <ul className="space-y-3 text-sm text-white/75">
+          <p className="text-white/80 leading-relaxed mb-6 md:mb-7 max-w-2xl text-lg md:text-xl font-light">Garantizá tu lugar y viví la experiencia completa de nuestra parrilla. Reservas para grupos, fechas especiales y celebraciones.</p>
+          <ul className="space-y-3 text-sm md:text-base text-white/80">
             {[
               'Confirmación inmediata al enviar el formulario.',
               'Para eventos privados, indicá detalles en notas.',
@@ -103,37 +103,37 @@ export default function ReservationForm(){
             ))}
           </ul>
           <div className="mt-6 h-px w-full max-w-sm lg:w-48 bg-white/15" aria-hidden="true" />
-          <p className="mt-4 text-xs uppercase tracking-[0.22em] text-white/45 font-medium">Atención personalizada</p>
+          <p className="mt-5 text-[0.7rem] md:text-xs uppercase tracking-[0.25em] text-white/45 font-medium">Atención personalizada</p>
         </div>
-        <form onSubmit={handleSubmit} className="relative p-6 md:p-7 rounded-3xl bg-white/[0.05] backdrop-blur-sm border border-white/10 shadow-xl max-w-xl w-full" aria-describedby="reservation-status">
-          <div className="grid gap-4 md:gap-5">
+        <form onSubmit={handleSubmit} className="relative p-7 md:p-8 rounded-3xl bg-white/[0.05] backdrop-blur-sm border border-white/10 shadow-xl max-w-xl w-full" aria-describedby="reservation-status">
+          <div className="grid gap-5 md:gap-6">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="res-name" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Nombre</label>
-                <input id="res-name" name="name" value={form.name} onChange={handleChange} required placeholder="Nombre completo" className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none" />
+                <label htmlFor="res-name" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Nombre</label>
+                <input id="res-name" name="name" value={form.name} onChange={handleChange} required placeholder="Nombre completo" className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none" />
               </div>
               <div>
-                <label htmlFor="res-email" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Email</label>
-                <input id="res-email" type="email" name="email" value={form.email} onChange={handleChange} required placeholder="email@dominio.com" className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none" />
+                <label htmlFor="res-email" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Email</label>
+                <input id="res-email" type="email" name="email" value={form.email} onChange={handleChange} required placeholder="email@dominio.com" className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none" />
               </div>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="res-phone" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Teléfono</label>
-                <input id="res-phone" name="phone" value={form.phone} onChange={handleChange} required placeholder="Ej: +54 11 ..." className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none" />
+                <label htmlFor="res-phone" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Teléfono</label>
+                <input id="res-phone" name="phone" value={form.phone} onChange={handleChange} required placeholder="Ej: +54 11 ..." className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none" />
               </div>
               <div>
-                <label htmlFor="res-people" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Personas</label>
-                <input id="res-people" type="number" name="people" min="1" max="30" value={form.people} onChange={handleChange} required placeholder="2" className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none" />
+                <label htmlFor="res-people" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Personas</label>
+                <input id="res-people" type="number" name="people" min="1" max="30" value={form.people} onChange={handleChange} required placeholder="2" className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none" />
               </div>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="res-date" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Fecha</label>
-                <input id="res-date" type="date" name="date" value={form.date} onChange={handleChange} required min={todayStr} className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none" />
+                <label htmlFor="res-date" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Fecha</label>
+                <input id="res-date" type="date" name="date" value={form.date} onChange={handleChange} required min={todayStr} className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none" />
               </div>
               <div>
-                <label htmlFor="res-time" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Hora</label>
+                <label htmlFor="res-time" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Hora</label>
                 {/* Reemplazar input time por un select de horarios válidos */}
                 <select
                   id="res-time"
@@ -142,7 +142,7 @@ export default function ReservationForm(){
                   onChange={handleChange}
                   required
                   disabled={!form.date || availableTimes.length === 0}
-                  className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none disabled:opacity-60"
+                  className="w-full rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none disabled:opacity-60"
                 >
                   <option value="" disabled>
                     {!form.date ? 'Seleccione una fecha' : availableTimes.length === 0 ? 'Cerrado' : 'Seleccione horario'}
@@ -157,13 +157,13 @@ export default function ReservationForm(){
               </div>
             </div>
             <div>
-              <label htmlFor="res-notes" className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-2">Notas (opcional)</label>
-              <textarea id="res-notes" name="notes" value={form.notes} onChange={handleChange} rows="3" placeholder="Cumpleaños, alergias, preferencias..." className="w-full resize-none rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-3.5 py-2.5 text-sm outline-none" />
+              <label htmlFor="res-notes" className="block text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-2">Notas (opcional)</label>
+              <textarea id="res-notes" name="notes" value={form.notes} onChange={handleChange} rows="3" placeholder="Cumpleaños, alergias, preferencias..." className="w-full resize-none rounded-lg bg-black/40 border border-white/15 focus:border-red-400/60 focus:ring-2 focus:ring-red-400/40 px-4 py-3 text-sm md:text-base outline-none" />
             </div>
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full sm:w-auto relative inline-flex justify-center items-center rounded-lg px-6 md:px-7 py-3 text-xs md:text-sm font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:-z-10 after:bg-accent hover:after:bg-red-600 after:blur-xl after:opacity-40 hover:after:opacity-60 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full sm:w-auto relative inline-flex justify-center items-center rounded-lg px-8 md:px-9 py-4 text-sm md:text-base font-semibold uppercase tracking-wide bg-accent text-white hover:bg-red-600 ring-1 ring-red-500/40 transition-[box-shadow,background-color,opacity] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70 shadow-[0_0_12px_rgba(185,28,28,0.55),0_0_28px_rgba(185,28,28,0.35)] hover:shadow-[0_0_18px_rgba(220,38,38,0.9),0_0_42px_rgba(220,38,38,0.6)] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:-z-10 after:bg-accent hover:after:bg-red-600 after:blur-xl after:opacity-40 hover:after:opacity-60 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {status === 'sending'
                 ? 'Enviando…'
