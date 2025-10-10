@@ -82,8 +82,17 @@ export default function ReservationForm(){
   }
 
   return (
-  <section id="reservations" className="relative min-h-screen bg-neutral-900 text-white flex md:items-center md:justify-center" aria-labelledby="reservation-heading">
-      <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,rgba(255,199,88,0.05),transparent)] opacity-70" aria-hidden="true"></div>
+  <section id="reservations" className="relative min-h-screen bg-black text-white flex md:items-center md:justify-center" aria-labelledby="reservation-heading">
+      {/* Overlay: resplandores rojos sutiles, acorde al sitio */}
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none"
+        style={{
+          backgroundImage:
+            'radial-gradient(60rem 60rem at 110% -10%, rgba(220,38,38,0.18), transparent 60%), radial-gradient(42rem 42rem at -10% 110%, rgba(220,38,38,0.12), transparent 60%)'
+        }}
+        aria-hidden="true"
+      ></div>
+
       <div className="max-w-6xl mx-auto px-6 w-full py-8 md:py-12 grid lg:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
         <div className="flex flex-col justify-center relative max-w-2xl">
           <h2 id="reservation-heading" className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 md:mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.55)]">

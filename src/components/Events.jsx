@@ -28,7 +28,7 @@ export default function Events(){
   {/* Layout mobile / tablet (se oculta en desktop) */}
   <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-8 md:py-12 grid lg:hidden gap-10 items-start md:items-center">
         <div className="lg:order-2">
-          <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.25)] lg:h-[440px] lg:flex lg:flex-col">
+          <div className="relative lg:h-[440px] lg:flex lg:flex-col">
           <h2 id="events-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
             <span className="text-red-400">Eventos</span> a tu medida
           </h2>
