@@ -22,7 +22,7 @@ export default function Footer(){
   }
 
   return (
-    <footer className="relative bg-neutral-950 text-white pt-16 pb-10 border-t border-white/10" role="contentinfo">
+    <footer className="relative bg-black text-white pt-16 pb-10 border-t border-white/10" role="contentinfo">
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

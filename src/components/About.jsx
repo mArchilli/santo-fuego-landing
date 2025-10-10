@@ -6,16 +6,18 @@ export default function About(){
     alt: 'Cortes a la parrilla con fuego intenso'
   }
   return (
-    <section id="about" className="relative py-32 bg-neutral-950 text-white" aria-labelledby="about-heading">
+    <section id="about" className="relative py-32 bg-black text-white" aria-labelledby="about-heading">
       {/* Fondo dividido y textura sutil */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800" aria-hidden="true" />
-      <div className="absolute inset-0 mix-blend-overlay opacity-[0.035] bg-[linear-gradient(115deg,#fff_4%,transparent_4%),linear-gradient(245deg,#fff_4%,transparent_4%)] bg-[size:32px_32px]" aria-hidden="true" />
+      {/* Se quita el overlay de degradado neutro */}
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800" aria-hidden="true" /> */}
+      {/* Se quita la textura para mantener negro puro */}
+      {/* <div className="absolute inset-0 mix-blend-overlay opacity-[0.035] bg-[linear-gradient(115deg,#fff_4%,transparent_4%),linear-gradient(245deg,#fff_4%,transparent_4%)] bg-[size:32px_32px]" aria-hidden="true" /> */}
       <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(circle_at_35%_40%,black,transparent_70%)] bg-[radial-gradient(circle_at_70%_75%,rgba(248,113,113,0.18),transparent_65%)]" aria-hidden="true" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-24 items-center">
           {/* Imagen grande a la derecha en desktop */}
-          <div className="lg:col-span-6 order-2 lg:order-2 relative">
+          <div className="hidden md:block lg:col-span-6 order-2 lg:order-2 relative">
             <div className="relative w-full max-w-xl ml-auto">
               <div className="absolute -inset-4 rounded-[3rem] bg-gradient-to-tr from-red-500/15 via-red-400/5 to-transparent blur-2xl opacity-70" aria-hidden="true" />
               <div className="relative aspect-[5/6] rounded-[2.5rem] overflow-hidden ring-1 ring-white/10 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)] group">

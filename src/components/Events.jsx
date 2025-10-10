@@ -23,7 +23,7 @@ export default function Events(){
   }, [images.length])
   const whatsapp = 'https://wa.me/541136039118?text=' + encodeURIComponent('¡Hola! Me gustaría consultar por eventos en Santo Fuego (empresariales, familiares, cenas).')
   return (
-  <section id="events" className="relative min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 text-white flex md:items-center md:justify-center" aria-labelledby="events-heading">
+  <section id="events" className="relative min-h-screen bg-black text-white flex md:items-center md:justify-center" aria-labelledby="events-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.05),transparent_60%)] opacity-40" aria-hidden="true" />
   {/* Layout mobile / tablet (se oculta en desktop) */}
   <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-8 md:py-12 grid lg:hidden gap-10 items-start md:items-center">

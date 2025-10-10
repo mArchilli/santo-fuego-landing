@@ -116,15 +116,18 @@ export default function Testimonials(){
   <section id="testimonials" className="relative md:min-h-screen bg-black text-white flex md:items-center md:justify-center" aria-labelledby="testimonials-heading">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,191,88,0.12),transparent_70%)] opacity-40" aria-hidden="true"></div>
       <div className="max-w-7xl mx-auto px-6 w-full py-8 md:py-14">
-        <div className="text-center mb-14 max-w-3xl mx-auto">
-          <span className="inline-block mb-3 text-[0.7rem] tracking-[0.28em] font-semibold uppercase text-red-400/80">Testimonios</span>
-          <h2 id="testimonials-heading" className="text-3xl md:text-[2.75rem] font-extrabold leading-tight tracking-tight mb-5">
+        <div className="text-center mb-5 max-w-3xl mx-auto">
+          
+          <h2 id="testimonials-heading" className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-5">
             Lo que dicen nuestros <span className="text-red-400">clientes</span>
           </h2>
           <p className="text-white/55 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
             Opiniones reales de quienes viven la experiencia de nuestra parrilla.
           </p>
+          
         </div>
+
+        <span className="block mx-auto text-center mb-5 text-[0.7rem] tracking-[0.28em] font-semibold uppercase text-red-400/80">Testimonios</span>
 
         {/* Si hay <= slidesPerView: grilla estática */}
         {list.length <= slidesPerView && (

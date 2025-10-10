@@ -3,11 +3,10 @@ import { Card, CardContent } from './ui/Card'
 
 export default function Contact(){
   return (
-  <section id="contact" className="relative min-h-screen bg-neutral-950 text-white flex items-center justify-center" aria-labelledby="contact-heading">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,199,88,0.10),transparent_70%)] opacity-40" aria-hidden="true"></div>
-  <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-10 md:py-14">
+  <section id="contact" className="relative min-h-screen bg-black text-white flex items-center justify-center" aria-labelledby="contact-heading">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-10 md:py-14">
         <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-          <h2 id="contact-heading" className="text-2xl md:text-4xl font-extrabold tracking-tight">
+          <h2 id="contact-heading" className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">
             Visitános en <span className="text-red-400">Santo Fuego</span>
           </h2>
           <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">
